@@ -1,4 +1,4 @@
-# 📈 Binance Credit Card Purchase Tracker
+# 📈 Binance Deposit History Scraper
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -200,11 +200,11 @@ python main.py
 ```bash
 # Build standalone executable
 pip install pyinstaller
-pyinstaller --onefile --windowed --name="Binance-Tracker" main.py
+pyinstaller --onefile --windowed --name="Binance-Deposit-History-Scraper" main.py
 
 # Executable will be in dist/ folder
-./dist/Binance-Tracker  # Linux/macOS
-./dist/Binance-Tracker.exe  # Windows
+./dist/Binance-Deposit-History-Scraper  # Linux/macOS
+./dist/Binance-Deposit-History-Scraper.exe  # Windows
 ```
 
 ## ⚙️ Configuration
@@ -408,7 +408,7 @@ To create a standalone executable with PyInstaller:
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --windowed --name="Binance Tracker" main.py
+pyinstaller --onefile --windowed --name="Binance-Deposit-History-Scraper" main.py
 ```
 
 The executable will be in the `dist/` folder and can be shared without Python installation.
@@ -458,7 +458,7 @@ python verify_installation.py
 
 **Sample output:**
 ```
-🔍 Binance Credit Card Purchase Tracker - Installation Verification
+🔍 Binance Deposit History Scraper - Installation Verification
 ============================================================
 🐍 Testing Python version...
    ✅ Python 3.11.5 - Compatible
@@ -536,7 +536,7 @@ python test_core.py
 
 **Sample output:**
 ```
-🚀 Binance Tracker - Core Functionality Tests
+🚀 Binance Deposit History Scraper - Core Functionality Tests
 ============================================================
 
 📋 Import Tests
