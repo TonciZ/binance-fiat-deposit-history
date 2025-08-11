@@ -31,8 +31,8 @@ A comprehensive desktop application to track your Binance credit card cryptocurr
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/binance-tracker.git
-cd binance-tracker
+git clone https://github.com/TonciZ/binance-fiat-deposit-history.git
+cd binance-fiat-deposit-history
 
 # Create virtual environment (recommended)
 python -m venv venv
@@ -176,7 +176,7 @@ All settings can also be configured through the application's Settings dialog:
 - **Purchases Tab**: Shows all credit card purchases with dates, amounts, and fees
 - **Spot Balances Tab**: Current cryptocurrency holdings
 - **Price Map Tab**: Current EUR prices for all assets
-- **Chart**: Portfolio value over time (placeholder in v1.0)
+- **Interactive Chart**: Investment timeline with buy/sell bars and P/L visualization
 
 ## Currency Support
 
