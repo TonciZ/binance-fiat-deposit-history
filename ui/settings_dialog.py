@@ -271,11 +271,11 @@ class SettingsDialog(QDialog):
         paypal_btn.clicked.connect(self.open_paypal)
         buttons_layout.addWidget(paypal_btn)
         
-        # Payoneer button
-        payoneer_btn = QPushButton("🏦 Payoneer Donation")
-        payoneer_btn.setStyleSheet("""
+        # Stripe button
+        stripe_btn = QPushButton("Buy me a coffee ☕")
+        stripe_btn.setStyleSheet("""
             QPushButton {
-                background-color: #ff6900;
+                background-color: #635bff;
                 color: white;
                 font-weight: bold;
                 padding: 10px 20px;
@@ -283,14 +283,14 @@ class SettingsDialog(QDialog):
                 font-size: 12px;
             }
             QPushButton:hover {
-                background-color: #e55a00;
+                background-color: #5a52e8;
             }
             QPushButton:pressed {
-                background-color: #cc5200;
+                background-color: #4f46e5;
             }
         """)
-        payoneer_btn.clicked.connect(self.open_payoneer)
-        buttons_layout.addWidget(payoneer_btn)
+        stripe_btn.clicked.connect(self.open_stripe)
+        buttons_layout.addWidget(stripe_btn)
         
         support_layout.addLayout(buttons_layout)
         layout.addWidget(support_group)
@@ -317,13 +317,13 @@ class SettingsDialog(QDialog):
     
     def open_paypal(self):
         """Open PayPal donation link."""
-        paypal_url = "https://www.paypal.com/donate/?business=your-paypal-email@example.com&amount=5&currency_code=USD"
+        paypal_url = "https://paypal.me/tzizic"
         QDesktopServices.openUrl(QUrl(paypal_url))
     
-    def open_payoneer(self):
-        """Open Payoneer donation link."""
-        payoneer_url = "https://www.payoneer.com/send-money/send/your-payoneer-link"
-        QDesktopServices.openUrl(QUrl(payoneer_url))
+    def open_stripe(self):
+        """Open Stripe donation link."""
+        stripe_url = "https://donate.stripe.com/5kQcN7flK40Da2veQQ08g00"
+        QDesktopServices.openUrl(QUrl(stripe_url))
     
     def create_about_tab(self):
         """Create about/help tab."""
