@@ -27,10 +27,25 @@ cd binance-fiat-deposit-history
 *Don't have git? [Download ZIP](https://github.com/TonciZ/binance-fiat-deposit-history/archive/refs/heads/main.zip) and extract it*
 
 ### Step 3: Automatic Setup (Easiest)
+
+**📁 Where to run:** Open Command Prompt or Terminal in the project folder
+
+**Windows users:**
+- Right-click in the `binance-fiat-deposit-history` folder
+- Select "Open in Terminal" or "Open PowerShell window here"
+- Or press `Win + R`, type `cmd`, press Enter, then `cd` to your project folder
+
+**Mac/Linux users:**
+- Open Terminal
+- Navigate to the project folder: `cd /path/to/binance-fiat-deposit-history`
+
+**🚀 Run the setup:**
 ```bash
 # Run the setup script - it does everything for you!
 python setup.py
 ```
+
+*The setup script will check your Python version, install all dependencies, create folders, and set up your .env file automatically!*
 
 ### Step 4: Verify Installation (Optional but Recommended)
 ```bash
@@ -45,10 +60,22 @@ python verify_installation.py
 4. Copy your API Key and Secret
 
 ### Step 6: Run the App
+
+**Option A: Using Python command (All platforms)**
 ```bash
 # Start the application
 python main.py
 ```
+
+**Option B: Using run.bat (Windows only - Even Easier!)**
+- Double-click the `run.bat` file in the project folder
+- The batch file will:
+  - Check if Python is installed
+  - Install missing dependencies automatically
+  - Launch the application
+  - Keep the window open if there are any errors
+
+*The run.bat file is perfect for Windows users who want a one-click solution!*
 
 ### Step 7: Configure & Use
 1. Enter your API keys in the settings dialog that appears
@@ -267,7 +294,12 @@ binance-tracker/
 ├── README.md              # This file
 ├── requirements.txt       # Python dependencies
 ├── main.py               # Application entry point
+├── run.bat               # Windows one-click launcher
+├── setup.py              # Automatic setup script
+├── verify_installation.py # Installation verification
+├── test_core.py          # Core functionality tests
 ├── .env.example          # Environment template
+├── images/               # Screenshot images
 ├── api/                  # Binance API client
 │   ├── binance_client.py # HTTP client with authentication
 │   └── fiat.py           # Fiat orders fetching logic
