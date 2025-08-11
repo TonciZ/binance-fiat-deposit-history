@@ -3,7 +3,7 @@ from pathlib import Path
 from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QFormLayout, QGridLayout,
     QLineEdit, QSpinBox, QPushButton, QLabel,
-    QTabWidget, QWidget, QTextEdit, QGroupBox, QMessageBox,
+    QTabWidget, QWidget, QTextEdit, QTextBrowser, QGroupBox, QMessageBox,
     QCheckBox, QFileDialog, QSlider
 )
 from PySide6.QtCore import Qt, QUrl
@@ -97,9 +97,10 @@ class SettingsDialog(QDialog):
         layout.addWidget(api_group)
         
         # Instructions
-        instructions = QTextEdit()
+        instructions = QTextBrowser()
         instructions.setMaximumHeight(150)
         instructions.setReadOnly(True)
+        instructions.setOpenExternalLinks(True)  # Enable automatic link opening
         instructions.setHtml("""
         <h4>API Setup Instructions:</h4>
         <ol>
@@ -111,8 +112,6 @@ class SettingsDialog(QDialog):
         </ol>
         <p><b>Security:</b> Only read-only permissions are required. Never share your API keys.</p>
         """)
-        # Connect the anchorClicked signal to open links
-        instructions.anchorClicked.connect(self.open_external_link)
         layout.addWidget(instructions)
         
         layout.addStretch()
