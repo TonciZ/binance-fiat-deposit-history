@@ -1,0 +1,3 @@
+# This file keeps the exports directory in git
+# All export files in this directory are ignored by .gitignore
+# This directory stores your exported data files locally
