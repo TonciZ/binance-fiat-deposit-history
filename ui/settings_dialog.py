@@ -1,14 +1,13 @@
 """Settings dialog for configuring API keys and application settings."""
-import os
 from pathlib import Path
 from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QFormLayout, QGridLayout,
-    QLineEdit, QSpinBox, QDoubleSpinBox, QPushButton, QLabel,
+    QLineEdit, QSpinBox, QPushButton, QLabel,
     QTabWidget, QWidget, QTextEdit, QGroupBox, QMessageBox,
-    QCheckBox, QFileDialog, QSlider, QComboBox
+    QCheckBox, QFileDialog, QSlider
 )
-from PySide6.QtCore import Qt, QUrl, Signal
-from PySide6.QtGui import QFont, QDesktopServices, QPainter, QColor
+from PySide6.QtCore import Qt, QUrl
+from PySide6.QtGui import QFont, QDesktopServices
 from datetime import datetime
 
 

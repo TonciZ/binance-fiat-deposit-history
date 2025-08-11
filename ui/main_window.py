@@ -597,28 +597,16 @@ class MainWindow(QMainWindow):
         """Create chart section with dynamic library selection."""
         try:
             from ui.chart_widget import create_chart_widget
-            from core.config import get_config
             
-            # Get chart library from config
-            config = get_config()
-            chart_library = getattr(config, 'chart_library', 'pyqtgraph')
-            
-            # Create chart widget using the configured library
-            chart_widget, self.chart_impl = create_chart_widget(chart_library, self)
+            # Create chart widget using pyqtgraph (only supported library)
+            chart_widget, self.chart_impl = create_chart_widget('pyqtgraph', self)
             
             return chart_widget
             
         except Exception as e:
-            # Fallback to pyqtgraph if there's an issue
-            print(f"Error creating chart with configured library, falling back to pyqtgraph: {e}")
-            try:
-                from ui.chart_widget import create_chart_widget
-                chart_widget, self.chart_impl = create_chart_widget('pyqtgraph', self)
-                return chart_widget
-            except Exception as fallback_error:
-                # Ultimate fallback - simple widget
-                print(f"Error with pyqtgraph fallback: {fallback_error}")
-                return self._create_fallback_chart_widget()
+            # Ultimate fallback - simple widget
+            print(f"Error creating chart widget: {e}")
+            return self._create_fallback_chart_widget()
     
     def _create_fallback_chart_widget(self) -> QWidget:
         """Create fallback chart widget when libraries are unavailable."""

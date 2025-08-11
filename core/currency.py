@@ -153,11 +153,6 @@ def build_eur_price_map(tickers: Dict[str, float]) -> Dict[str, float]:
     return build_price_map(tickers, "EUR")
 
 
-def get_asset_eur_price(asset: str, eur_price_map: Dict[str, float]) -> Optional[float]:
-    """Get EUR price for a specific asset (legacy function)."""
-    return get_asset_price(asset, eur_price_map)
-
-
 def calculate_portfolio_eur_value(balances: Dict[str, float], eur_price_map: Dict[str, float]) -> float:
     """Calculate total EUR value of a portfolio (legacy function)."""
     return calculate_portfolio_value(balances, eur_price_map, "EUR")
