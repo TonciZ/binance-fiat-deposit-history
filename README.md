@@ -1,4 +1,4 @@
-# 📈 Binance Deposit History Scraper
+# 📈 Binance Full Deposit History Tool
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -200,11 +200,11 @@ python main.py
 ```bash
 # Build standalone executable
 pip install pyinstaller
-pyinstaller --onefile --windowed --name="Binance-Deposit-History-Scraper" main.py
+pyinstaller --onefile --windowed --name="Binance-Full-Deposit-History-Tool" main.py
 
 # Executable will be in dist/ folder
-./dist/Binance-Deposit-History-Scraper  # Linux/macOS
-./dist/Binance-Deposit-History-Scraper.exe  # Windows
+./dist/Binance-Full-Deposit-History-Tool  # Linux/macOS
+./dist/Binance-Full-Deposit-History-Tool.exe  # Windows
 ```
 
 ## ⚙️ Configuration
@@ -408,7 +408,7 @@ To create a standalone executable with PyInstaller:
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --windowed --name="Binance-Deposit-History-Scraper" main.py
+pyinstaller --onefile --windowed --name="Binance-Full-Deposit-History-Tool" main.py
 ```
 
 The executable will be in the `dist/` folder and can be shared without Python installation.
@@ -458,7 +458,7 @@ python verify_installation.py
 
 **Sample output:**
 ```
-🔍 Binance Deposit History Scraper - Installation Verification
+🔍 Binance Full Deposit History Tool - Installation Verification
 ============================================================
 🐍 Testing Python version...
    ✅ Python 3.11.5 - Compatible
@@ -536,7 +536,7 @@ python test_core.py
 
 **Sample output:**
 ```
-🚀 Binance Deposit History Scraper - Core Functionality Tests
+🚀 Binance Full Deposit History Tool - Core Functionality Tests
 ============================================================
 
 📋 Import Tests
