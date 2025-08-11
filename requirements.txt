@@ -1,0 +1,16 @@
+# Core application dependencies
+httpx>=0.25.0,<1.0.0
+PySide6>=6.6.0,<7.0.0
+pydantic>=2.5.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+tenacity>=8.2.0,<9.0.0
+python-dateutil>=2.8.0,<3.0.0
+pyqtgraph>=0.13.0,<1.0.0
+
+# Chart functionality (PyQtGraph dependency)
+numpy>=1.24.0,<2.0.0
+
+# Optional: for building standalone executables
+# pyinstaller>=5.0.0,<6.0.0
+
+# Note: No SQLite dependencies needed - uses JSON file storage only
