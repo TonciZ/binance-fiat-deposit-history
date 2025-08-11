@@ -1,1 +1,1 @@
-"""UI package for Binance Credit Card Purchase Tracker."""
+"""UI package for Binance Full Deposit History Tool."""

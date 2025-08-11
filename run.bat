@@ -1,5 +1,5 @@
 @echo off
-echo Starting Binance Credit Card Purchase Tracker v0.1...
+echo Starting Binance Full Deposit History Tool v0.1...
 echo.
 
 REM Check if Python is installed

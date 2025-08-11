@@ -1,1 +1,1 @@
-"""API package for Binance Credit Card Purchase Tracker."""
+"""API package for Binance Full Deposit History Tool."""

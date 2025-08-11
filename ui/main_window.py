@@ -332,7 +332,7 @@ class MainWindow(QMainWindow):
         self.app_dir = app_dir
         self.fetch_worker: Optional[FetchWorker] = None
         
-        self.setWindowTitle("Binance Credit Card Purchase Tracker v1.0")
+        self.setWindowTitle("Binance Full Deposit History Tool v1.0")
         
         # Set initial size before maximizing (fallback for smaller screens)
         self.setMinimumSize(1024, 600)

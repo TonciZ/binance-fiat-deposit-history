@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify that Binance Credit Card Purchase Tracker installation is working correctly."""
+"""Verify that Binance Full Deposit History Tool installation is working correctly."""
 
 import sys
 import importlib
@@ -143,7 +143,7 @@ def test_gui_functionality():
 def main():
     """Run all verification tests."""
     print("=" * 60)
-    print("🔍 Binance Credit Card Purchase Tracker - Installation Verification")
+    print("🔍 Binance Full Deposit History Tool - Installation Verification")
     print("=" * 60)
     
     tests = [

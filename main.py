@@ -1,4 +1,4 @@
-"""Main application entry point for Binance Credit Card Purchase Tracker."""
+"""Main application entry point for Binance Full Deposit History Tool."""
 import sys
 import traceback
 import subprocess
@@ -10,7 +10,7 @@ def setup_application():
     from PySide6.QtWidgets import QApplication
     
     app = QApplication(sys.argv)
-    app.setApplicationName("Binance Credit Card Purchase Tracker")
+    app.setApplicationName("Binance Full Deposit History Tool")
     app.setApplicationVersion("1.0.0")
     app.setOrganizationName("Binance Tracker")
     
@@ -92,7 +92,7 @@ def check_and_install_dependencies():
 def show_startup_info():
     """Show application startup information."""
     print("" + "="*60)
-    print("📈 Binance Credit Card Purchase Tracker v1.0")
+    print("📈 Binance Full Deposit History Tool v1.0")
     print("" + "="*60)
     print(f"🐍 Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
     print(f"📂 Working Directory: {Path.cwd()}")

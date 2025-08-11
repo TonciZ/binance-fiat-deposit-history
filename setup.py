@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Setup script for Binance Credit Card Purchase Tracker."""
+"""Setup script for Binance Full Deposit History Tool."""
 
 import sys
 import subprocess
@@ -69,7 +69,7 @@ def setup_environment():
 def main():
     """Main setup function."""
     print("=" * 60)
-    print("📈 Binance Credit Card Purchase Tracker - Setup")
+    print("📈 Binance Full Deposit History Tool - Setup")
     print("=" * 60)
     
     # Check Python version

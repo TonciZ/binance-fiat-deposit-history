@@ -1,1 +1,1 @@
-"""Core functionality package for Binance Credit Card Purchase Tracker."""
+"""Core functionality package for Binance Full Deposit History Tool."""

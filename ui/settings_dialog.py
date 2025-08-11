@@ -240,7 +240,7 @@ class SettingsDialog(QDialog):
         thank_you_text.setMaximumHeight(120)
         thank_you_text.setReadOnly(True)
         thank_you_text.setHtml("""
-        <p><strong>Thank you for using Binance Credit Card Purchase Tracker!</strong></p>
+        <p><strong>Thank you for using Binance Full Deposit History Tool!</strong></p>
         <p>If this tool has been helpful in tracking your crypto investments and calculating your P/L, 
         consider supporting its continued development and maintenance.</p>
         <p>Every contribution helps keep this project free and open source! ❤️</p>
@@ -331,7 +331,7 @@ class SettingsDialog(QDialog):
         layout = QVBoxLayout(about_widget)
         
         # Title
-        title_label = QLabel("Binance Credit Card Purchase Tracker")
+        title_label = QLabel("Binance Full Deposit History Tool")
         title_font = QFont()
         title_font.setPointSize(16)
         title_font.setBold(True)
@@ -349,8 +349,8 @@ class SettingsDialog(QDialog):
         description.setReadOnly(True)
         description.setHtml("""
         <h4>About</h4>
-        <p>This application helps track your Binance credit card cryptocurrency purchases 
-        and compare them with your current portfolio value to calculate profit/loss.</p>
+        <p>This application helps track your complete Binance deposit history 
+        and analyze your cryptocurrency investment performance.</p>
         
         <h4>Features</h4>
         <ul>
