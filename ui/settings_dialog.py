@@ -100,6 +100,7 @@ class SettingsDialog(QDialog):
         instructions = QTextEdit()
         instructions.setMaximumHeight(150)
         instructions.setReadOnly(True)
+        instructions.setOpenExternalLinks(True)  # Enable clickable links
         instructions.setHtml("""
         <h4>API Setup Instructions:</h4>
         <ol>
