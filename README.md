@@ -6,7 +6,75 @@
 
 A comprehensive desktop application to track your Binance credit card cryptocurrency purchases, visualize your investment timeline, and calculate real-time profit/loss against your current portfolio.
 
-![Application Screenshot](docs/screenshot.png)
+---
+
+## 🚀 **QUICK START FOR BEGINNERS** 
+
+**Want to try the app in 5 minutes? Follow these simple steps:**
+
+### Step 1: Download Python
+- Go to [python.org/downloads](https://www.python.org/downloads/) 
+- Download Python 3.8 or newer
+- **Windows users**: Check "Add Python to PATH" during installation
+- **Mac/Linux users**: Python might already be installed
+
+### Step 2: Get the Code
+```bash
+# Download this project
+git clone https://github.com/TonciZ/binance-fiat-deposit-history.git
+cd binance-fiat-deposit-history
+```
+*Don't have git? [Download ZIP](https://github.com/TonciZ/binance-fiat-deposit-history/archive/refs/heads/main.zip) and extract it*
+
+### Step 3: Automatic Setup (Easiest)
+```bash
+# Run the setup script - it does everything for you!
+python setup.py
+```
+
+### Step 4: Verify Installation (Optional but Recommended)
+```bash
+# Make sure everything works
+python verify_installation.py
+```
+
+### Step 5: Get Your Binance API Keys
+1. Go to [Binance API Settings](https://www.binance.com/en/my/settings/api-management)
+2. Create a new API key
+3. **IMPORTANT**: Only enable "Enable Reading" - nothing else!
+4. Copy your API Key and Secret
+
+### Step 6: Run the App
+```bash
+# Start the application
+python main.py
+```
+
+### Step 7: Configure & Use
+1. Enter your API keys in the settings dialog that appears
+2. Click "Test Connection" to verify
+3. Click "Fetch Card Purchases" to import your data
+4. Explore your crypto investment history!
+
+**That's it! 🎉**
+
+---
+
+## 📸 Screenshots
+
+### Main Dashboard with Interactive Charts
+![Main Application](images/Example.png)
+
+### Interactive Chart Hover Details
+![Chart Hover Details 1](images/Chart%20Hover1.png)
+![Chart Hover Details 2](images/Chart%20Hover2.png)
+
+### Settings & Configuration
+![Settings Dialog](images/Settings.png)
+![API Configuration](images/API%20modal.png)
+
+### About & Information
+![About Dialog](images/About.png)
 
 ## ✨ Features
 
@@ -312,6 +380,198 @@ pyinstaller --onefile --windowed --name="Binance Tracker" main.py
 ```
 
 The executable will be in the `dist/` folder and can be shared without Python installation.
+
+## 🔧 Utility Scripts
+
+The project includes several helper scripts to make installation and testing easier:
+
+### `setup.py` - Automatic Setup Script
+
+**What it does:**
+- Checks if your Python version is compatible (3.8+)
+- Automatically installs all required dependencies
+- Creates necessary directories (`data/`, `exports/`, `logs/`)
+- Sets up your `.env` file from the template
+- Handles common setup issues automatically
+
+**How to use it:**
+```bash
+# Run this first after downloading the project
+python setup.py
+```
+
+**When to use it:**
+- First time setting up the project
+- After updating Python or dependencies
+- When you get "module not found" errors
+- If manual installation steps aren't working
+
+---
+
+### `verify_installation.py` - Installation Checker
+
+**What it does:**
+- Verifies your Python version is compatible
+- Checks if all required Python packages are installed
+- Tests if project files and folders are in place
+- Attempts to import all application modules
+- Tests basic GUI functionality
+- Provides detailed error messages if something is wrong
+
+**How to use it:**
+```bash
+# Run this to check if everything is set up correctly
+python verify_installation.py
+```
+
+**Sample output:**
+```
+🔍 Binance Credit Card Purchase Tracker - Installation Verification
+============================================================
+🐍 Testing Python version...
+   ✅ Python 3.11.5 - Compatible
+
+📦 Testing dependencies...
+   ✅ httpx          - HTTP client for API requests
+   ✅ PySide6        - Qt GUI framework
+   ✅ pydantic       - Data validation
+   ✅ dotenv         - Environment file handling
+   ✅ tenacity       - Retry logic for API calls
+   ✅ dateutil       - Date parsing utilities
+   ✅ pyqtgraph     - Chart and graph widgets
+   ✅ numpy          - Numerical computations for charts
+
+📁 Testing project structure...
+   ✅ main.py
+   ✅ requirements.txt
+   ✅ README.md
+   ✅ api/
+   ✅ core/
+   ✅ ui/
+   ✅ data/
+   ✅ exports/
+
+🔧 Testing application modules...
+   ✅ core.config               - Configuration management
+   ✅ api.binance_client        - Binance API client
+   ✅ ui.main_window            - Main window
+
+🖥️ Testing GUI functionality...
+   ✅ QApplication creation - OK
+   ✅ Chart widget import - OK
+
+============================================================
+📋 Verification Summary
+============================================================
+Python Version       - ✅ PASSED
+Dependencies         - ✅ PASSED
+Project Structure    - ✅ PASSED
+Application Modules  - ✅ PASSED
+GUI Functionality    - ✅ PASSED
+
+============================================================
+🎉 All tests PASSED! Installation is working correctly.
+
+You can now run the application with:
+   python main.py
+============================================================
+```
+
+**When to use it:**
+- After running `setup.py` to verify everything worked
+- Before reporting bugs or asking for help
+- After updating dependencies or Python
+- When the main application won't start
+- To generate diagnostic information for troubleshooting
+
+---
+
+### `test_core.py` - Core Functionality Tests
+
+**What it does:**
+- Tests that core application modules can be imported
+- Verifies currency conversion functions work correctly
+- Tests chart widget creation
+- Tests data storage and retrieval functionality
+- Runs unit tests on business logic functions
+- Provides detailed test results and error information
+
+**How to use it:**
+```bash
+# Run this to test core functionality
+python test_core.py
+```
+
+**Sample output:**
+```
+🚀 Binance Tracker - Core Functionality Tests
+============================================================
+
+📋 Import Tests
+----------------------------------------
+🧪 Testing imports...
+  ✅ core.config
+  ✅ core.currency
+  ✅ core.json_data_manager
+  ✅ api.binance_client
+  ✅ ui.chart_widget
+✅ Import Tests PASSED
+
+📋 Chart Widget Creation
+----------------------------------------
+🧪 Testing chart widget creation...
+  ✅ Chart widget created successfully
+✅ Chart Widget Creation PASSED
+
+📋 Currency Functions
+----------------------------------------
+🧪 Testing currency functions...
+  ✅ Price map building works
+  ✅ Portfolio calculation works: 8000.00 EUR
+✅ Currency Functions PASSED
+
+📋 Data Manager
+----------------------------------------
+🧪 Testing JSON data manager...
+  ✅ Purchase saving works
+  ✅ Purchase loading works
+✅ Data Manager PASSED
+
+============================================================
+📊 Test Summary
+============================================================
+✅ Passed: 4
+❌ Failed: 0
+📈 Success Rate: 100.0%
+
+🎉 All tests passed! Core functionality is working correctly.
+```
+
+**When to use it:**
+- After making changes to core application code
+- When debugging application issues
+- Before submitting bug reports
+- To verify the application works after updates
+- During development to ensure changes don't break existing functionality
+
+---
+
+### 🆘 **Troubleshooting with Utility Scripts**
+
+**If the main application won't start:**
+1. Run `python verify_installation.py` first
+2. If verification fails, run `python setup.py`
+3. Run verification again to confirm the fix
+
+**If you're getting weird errors:**
+1. Run `python test_core.py` to isolate the problem
+2. Check the detailed error messages
+3. Fix any missing dependencies or configuration issues
+
+**If you need to report a bug:**
+1. Run both `verify_installation.py` and `test_core.py`
+2. Include the output from both scripts in your bug report
+3. This helps developers understand your environment
 
 ## Development
 
