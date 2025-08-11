@@ -100,7 +100,6 @@ class SettingsDialog(QDialog):
         instructions = QTextEdit()
         instructions.setMaximumHeight(150)
         instructions.setReadOnly(True)
-        instructions.setOpenExternalLinks(True)  # Enable clickable links
         instructions.setHtml("""
         <h4>API Setup Instructions:</h4>
         <ol>
@@ -112,6 +111,8 @@ class SettingsDialog(QDialog):
         </ol>
         <p><b>Security:</b> Only read-only permissions are required. Never share your API keys.</p>
         """)
+        # Connect the anchorClicked signal to open links
+        instructions.anchorClicked.connect(self.open_external_link)
         layout.addWidget(instructions)
         
         layout.addStretch()
@@ -325,6 +326,10 @@ class SettingsDialog(QDialog):
         """Open Stripe donation link."""
         stripe_url = "https://donate.stripe.com/5kQcN7flK40Da2veQQ08g00"
         QDesktopServices.openUrl(QUrl(stripe_url))
+    
+    def open_external_link(self, url):
+        """Open external link in browser."""
+        QDesktopServices.openUrl(url)
     
     def create_about_tab(self):
         """Create about/help tab."""
